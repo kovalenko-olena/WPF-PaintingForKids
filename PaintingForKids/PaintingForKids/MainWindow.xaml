@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaintingForKids"
         mc:Ignorable="d"
-        Title="Painting For Kids" Height="800" Width="800" SizeChanged="MainWindow1_SizeChanged" >
+        Title="Painting For Kids" Height="850" Width="850" SizeChanged="MainWindow1_SizeChanged" >
 
     <Grid Margin="0,0,0,0">
         <StackPanel Background="#FFE5E5E5" Margin="0,20,0,20">
@@ -15,7 +15,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="Mode" HorizontalAlignment="Center"/>
+                    <Label Grid.Row="0" Content="Mode" Style="{StaticResource BasicTextStyle}"/>
                     <Border Grid.Row="1" Margin="0,2,0,2.4" Width="123" VerticalAlignment="Center">
                         <WrapPanel Orientation="Vertical" AutomationProperties.Name="Mode" >
                             <RadioButton x:Name="inkRadio" Margin="15,5" Content="Ink" IsChecked="True" Click="RadioButtonClicked" />
@@ -30,16 +30,16 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="Brush" HorizontalAlignment="Center"/>
+                    <Label Grid.Row="0" Content="Brush" Style="{StaticResource BasicTextStyle}"/>
                     <Border Grid.Row="1" VerticalAlignment="Center" Height="80">
                         <WrapPanel Orientation="Vertical" AutomationProperties.Name="StylusTip" Width="27">
-                            <Button x:Name="btnStylusCircle" Click="btnStylusCircle_Click" Margin="1,1,1,1" Background="Transparent" BorderBrush="Transparent">
+                            <Button x:Name="btnStylusCircle" Click="btnStylusCircle_Click" Style="{StaticResource TypeBrushButtonStyle}">
                                 <Ellipse x:Name="StylusCircle" Stroke="Black" Height="20" Width="20"/>
                             </Button>
-                            <Button x:Name="btnStylusRect" Click="btnStylusRect_Click" Margin="1,1,1,1" Background="Transparent" BorderBrush="Transparent">
+                            <Button x:Name="btnStylusRect" Click="btnStylusRect_Click" Style="{StaticResource TypeBrushButtonStyle}">
                                 <Rectangle x:Name="StylusRect" Height="20" Stroke="Black" Width="20"/>
                             </Button>
-                            <Button x:Name="btnStylusEllipse" Click="btnStylusEllipse_Click" Margin="1,1,1,1" Background="Transparent" BorderBrush="Transparent">
+                            <Button x:Name="btnStylusEllipse" Click="btnStylusEllipse_Click" Style="{StaticResource TypeBrushButtonStyle}">
                                 <Ellipse x:Name="StylusEllipse" Stroke="Black" Height="20" Width="5" Margin="1,1,1,1"/>
                             </Button>
                         </WrapPanel>
@@ -51,34 +51,34 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="Color" HorizontalAlignment="Center"/>
+                    <Label Grid.Row="0" Content="Color" Style="{StaticResource BasicTextStyle}"/>
                     <ComboBox Grid.Row="1" x:Name="comboColors" Width="123" Height="75" SelectionChanged="ColorChanged" MaxDropDownHeight="388" VerticalContentAlignment="Center">
                         <StackPanel Orientation ="Horizontal" Tag="Red">
-                            <Rectangle RadiusX="10" RadiusY="10"  Fill ="Red" Height ="50" Width ="50"  StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Red" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Red"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="Yellow">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="Yellow" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Yellow" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Yellow"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="Violet">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="Violet" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Violet" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Violet"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="Green">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="Green" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Green" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Green"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="Blue">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="Blue" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Blue" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Blue"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="Black">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="Black" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="Black" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Black"/>
                         </StackPanel>
                         <StackPanel Orientation ="Horizontal" Tag="White">
-                            <Rectangle RadiusX="10" RadiusY="10" Fill ="White" Height ="50" Width ="50" StrokeThickness="2" Stroke="#FF4E4E62"/>
+                            <Rectangle Fill ="White" Style="{StaticResource ColorStyle}"/>
                             <Label FontSize ="10" HorizontalAlignment="Center" VerticalAlignment="Center" Content="White"/>
                         </StackPanel>
                     </ComboBox>
@@ -89,7 +89,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="Size" HorizontalAlignment="Center"/>
+                    <Label Grid.Row="0" Content="Size" Style="{StaticResource BasicTextStyle}"/>
                     <Slider Grid.Row="1" x:Name="MySlider"  Width="123" VerticalAlignment="Center" Maximum="5" Minimum="1" SmallChange="1" Value="1" ValueChanged="Slider_ValueChanged" ScrollViewer.HorizontalScrollBarVisibility="Visible" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </Grid>
                 <Separator Margin="10,0,10,0"/>
@@ -98,7 +98,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" x:Name="AddPicture" Content="Add picture" Click="AddPicture_Click" Margin="0,5,0,5"></Button>
+                    <Button Grid.Row="0" x:Name="AddPicture" Content="Add picture" Click="AddPicture_Click" Style="{StaticResource  AddButton}"></Button>
                     <ComboBox Grid.Row="1" x:Name="comboPictures" Width="123" Height="70" SelectionChanged="PictureChanged" MaxDropDownHeight="388" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                         <StackPanel Orientation ="Horizontal" Tag="1car" Height="65">
                             <Label Width="70">
@@ -144,9 +144,9 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" x:Name="btnSave" Margin="0,8,0,8" Width="70" Content="Save" Click="SaveData"/>
-                    <Button Grid.Row="1" x:Name="btnLoad" Margin="0,8,0,8" Width="70" Content="Load" Click="LoadData"/>
-                    <Button Grid.Row="2" x:Name="btnClear" Margin="0,8,0,8" Width="70" Content="Clear" Click="Clear"/>
+                    <Button Grid.Row="0" x:Name="btnSave" Content="Save" Click="SaveData" Style="{StaticResource  BasicButtonStyle}"/>
+                    <Button Grid.Row="1" x:Name="btnLoad"  Content="Load" Click="LoadData" Style="{StaticResource  BasicButtonStyle}"/>
+                    <Button Grid.Row="2" x:Name="btnClear" Content="Clear" Click="Clear" Style="{StaticResource  BasicButtonStyle}"/>
                 </Grid>
             </ToolBar>
             <InkCanvas Name="MyInkCanvas"  Height="632"   HorizontalAlignment="Left" MinWidth="798" Width="Auto" Background="AliceBlue">

@@ -4,6 +4,56 @@
              xmlns:local="clr-namespace:PaintingForKids"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="BasicTextStyle" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key ="BasicButtonStyle" TargetType="Button">
+            <Setter Property = "FontSize" Value ="14"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property = "Width" Value = "70"/>
+            <Setter Property = "Margin" Value = "0,7,0,7"/>
+            <Setter Property = "Background" Value = "LightGray"/>
+            <Setter Property = "Foreground" Value = "Red"/>
+            <Style.Triggers>
+                <Trigger Property = "IsMouseOver" Value = "True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty = "Width">
+                                <DoubleAnimation From = "70" To = "123" Duration = "0:0:2" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key ="TypeBrushButtonStyle" TargetType="Button">
+            <Setter Property = "Margin" Value ="1,1,1,1"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style x:Key ="ColorStyle" TargetType="Rectangle">
+            <Setter Property = "RadiusX" Value ="10"/>
+            <Setter Property = "RadiusY" Value ="10"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Stroke" Value="#FF4E4E62"/>
+        </Style>
+        <Style x:Key ="AddButton" TargetType="Button">
+            <Setter Property = "FontSize" Value ="16"/>
+            <Setter Property = "Margin" Value = "0,5,0,5"/>
+            <Setter Property = "Background" Value = "LightGray"/>
+            <Setter Property = "Foreground" Value = "Red"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Style.Triggers>
+                <Trigger Property = "IsFocused" Value = "True">
+                    <Setter Property = "Background" Value = "Yellow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+       
     </Application.Resources>
 </Application>
